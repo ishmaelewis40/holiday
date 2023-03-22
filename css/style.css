@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;1,100&family=Poppins:wght@100&display=swap');
+
+:root {
+    --PrimaryColor: hsl(199, 100%, 33%);
+    --SecondaryColor: hsl(187, 85%, 43%);
+    --gradientColor: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%), hsl(199, 100%, 33%));
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(201, 33%, 16%);
+    --textColor: hsl(240, 4%, 36%);
+    --whiteColorDeam: hsl(0,0%, 93%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: rgb(239, 239, 239);
+    --bodyColor: rgb(240, 240, 246);
+    --cardBG: rgb(255, 255, 235);
+    --box-shodow:0 .5rem 1rem rgba(0,0,0,.1);
+  }
+  *{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+ }
+ *::selection{
+    background-color: var(--main-color);
+    color: var(--white);
+ }
+ 
+ *::-webkit-scrollbar{
+    height: .5rem;
+    width: 1rem;
+ }
+ 
+ *::-webkit-scrollbar-track{
+    background-color: transparent;
+ }
+ 
+ *::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+ }
+ 
+ html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 10rem;
+ }
+ body{
+   background-color: var(--whiteColorDeam);
+ }
+ section{
+   padding: 3rem 2rem;
+   max-width: 1200px;
+   margin: 0 auto;
+ }
+ .btn, .inline-btn{
+   padding: 1rem 3rem;
+   cursor: pointer;
+   font-size: 1.8rem;
+   color: var(--whiteColor);
+   background-image:linear-gradient(to right, #10B5CB,#0073A8,#0073A8) ;
+   text-align: center;
+   text-transform: capitalize;
+   margin-top: 1rem;
+ }
+ .btn{
+   width:100%;
+   display: block;
+   border-radius: 10px;
+ }
+ .inline-btn{
+   display: inline-block;
+ }
+.btn:hover,
+.inline-btn:hover{
+   background-color: var(--SecondaryColor);
+}
+
+ /* Header starts*/
+ .header{
+   position: sticky;
+   top:0; left: 0; right:0;
+   z-index:1000;
+ }
+ .nav.nav-1 {
+   background: var(--blackColor);
+ }
+ .header .nav.nav-2 {
+   background: var(--whiteColor);
+ }
+ #menu-btn{
+   font-size: 2rem;
+   color: var(--blackColor);
+   display: none;
+
+ }
+ .header .nav-1 .flex{
+   padding-top: 1rem;
+   padding-bottom: 1rem;
+ }
+ .header .nav-2 .flex{
+   padding-top: 0;
+   padding-bottom: 0;
+ }
+ .header .nav .flex{
+   display:flex;
+   align-items: center;
+   justify-content:space-between;
+ }
+.header .nav .flex .logo {
+   font-size: 2rem;
+   color: var(--whiteColor)
+}
+.header .nav .flex .logo i{
+   margin-right: .7rem;
+   color: var(--SecondaryColor)
+}
+ a.dest{
+  
+   color: var(--whiteColor)
+}
+.header .nav .flex ul {
+   list-style: none;
+}
+.header .nav .flex ul li{
+ float: left;
+ position: relative;
+}
+.header .nav .flex ul li a{
+   display: block;
+   padding: 1.2rem 2rem;
+   font-size: 1.8rem;
+   color: var(--blackColor);
+   background-color: var(--whiteColor);
+}
+.header .nav .flex ul li a i{
+   margin-left: .8rem;
+}
+.header .nav .flex ul li a:hover{
+   color: var(--whiteColor);
+   background-color: var(--SecondaryColor);
+}
+.header .nav .flex ul li a i{
+   margin-left: .8rem;
+}
+.header .nav .flex ul li ul{
+   position:absolute;
+   left: 0;
+   width: 16rem;
+}
+.header .nav .flex ul li ul li{
+   width:100%;
+}
+.header .nav .flex ul li ul li a{
+   display: none;
+}
+.header .nav .flex ul li:hover ul li a{
+   display:block;
+}
+ /*Header Ends*/
+.form-container form{
+max-width:50rem;
+margin: 0 auto;
+background-color: var(--whiteColor);
+box-shadow: var(--box-shodow);
+border-radius: 10px;
+padding: 2rem;
+text-align: center;
+
+}
+.form-container form h3{
+   font-size: 2.5rem;
+   color:var(--blackColor);
+   padding-bottom: 1rem;
+   text-transform: capitalize;
+}
+.form-container  input.box{
+ width: 100%;
+ padding: 1.4rem;
+ font-size: 1.8rem;
+ color: black;
+ border: solid 1px var(--greyText);
+ margin: 1rem 0;
+ background-color: var(--inputColor);
+ border-radius: 7px;
+
+}
+.form-container form p{
+   padding: 1rem 0;
+   font-size: 1.8rem;
+   color: var(--blackColor)
+}
+.form-container form a{
+   color: var(--SecondaryColor)
+}
+.form-container form a:hover{
+   text-decoration: underline;
+}
+
+/*Footer starts*/
+.footer .flex {
+   display: flex;
+   flex-wrap: wrap;
+   background-color: var(--whiteColor);
+   gap: 5rem;
+   
+}
+.footer .flex .box a{
+   display: flex;
+   flex-wrap: wrap;
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+.footer .flex .box a i{
+   color: var(--SecondaryColor);
+}
+.footer .flex .box a:hover span{
+   color: var(--SecondaryColor);
+   text-decoration: none;
+}
+.footer .flex .box{
+   flex: 1 1 25rem;
+}
+
+.footer .flex .box:last-child a i {
+   margin-left: 1.5rem;
+
+}
+.footer .flex .box:first-child a i {
+   margin-right: 1.5rem;
+
+}
+.footer .flex .box:last-child  {
+   text-align: right;
+
+
+}
+.footer .flex .box:nth-child(2)  {
+   text-align: center;
+}
+.footer .credit{
+   padding: 3rem 2rem;
+   font-size: 2rem;
+   color: black;
+   margin-top: 3rem;
+   border-top: black;
+   text-align: center;
+}
+.footer .credit span{
+   color: var(--SecondaryColor);
+}
+/*Footer Ends*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* media queries */
+
+ @media (max-width: 991px){
+   html{
+      font-size:55%;
+   }
+ }
+ @media(max-width:768px){
+   #menu-btn{
+      display: inline-block;
+   }
+   .header .nav .menu{
+      position:absolute;
+      top: 99%; left: 0; right: 0;
+      background: var(--whiteColor);
+      border-top: var(--blackColor)!important;
+      z-index: 10;
+      transition: .2s linear;
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0%);
+   }
+   .header .nav .menu.active{
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+   }
+   .header .nav .menu ul li{
+      position: relative;
+      width: 100%;
+
+   }
+   .header .nav .menu ul li ul{
+      position: relative;
+      width: 100%;
+
+   }
+   .header .nav .menu ul li ul li a{
+      padding-left: 4rem;
+      background-color: rgb(233, 233, 233);
+
+   }
+ }
+ @media (max-width:450px){
+   html{
+      font-size:50%;
+   }
+ }
